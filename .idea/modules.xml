@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CodeEditor-language-java.iml" filepath="$PROJECT_DIR$/.idea/modules/CodeEditor-language-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CodeEditor-language-java.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/CodeEditor-language-java.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/logger-debug/CodeEditor-language-java.logger-debug.iml" filepath="$PROJECT_DIR$/.idea/modules/logger-debug/CodeEditor-language-java.logger-debug.iml" />
+    </modules>
+  </component>
+</project>
