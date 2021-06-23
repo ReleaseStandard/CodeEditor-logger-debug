@@ -23,6 +23,7 @@ public class Logger {
     public static boolean DEBUG = true;
     public static boolean VERBOSE = true;
     public static String OFFSET = "    ";
+    public static boolean TESTEST = false;
 
     /**
      * This function is used to Show debug information to end user.
