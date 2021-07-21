@@ -20,7 +20,7 @@ public class Logger {
     public static final String LOG_TAG = "CodeEditor";
     public static boolean DEBUG = true;
     public static boolean VERBOSE = true;
-    public static String OFFSET = "    ";
+    public static String OFFSET = "     ";
 
     /**
      * This function is used to Show debug information to end user.
