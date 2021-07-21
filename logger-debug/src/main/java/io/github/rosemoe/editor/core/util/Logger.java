@@ -15,8 +15,6 @@
  */
 package io.github.rosemoe.editor.core.util;
 
-import android.util.Log;
-
 public class Logger {
 
     public static final String LOG_TAG = "CodeEditor";
@@ -34,14 +32,14 @@ public class Logger {
     }
     public static void debug(Object ...args) {
         if (! DEBUG ) { return ; }
-        Log.v(LOG_TAG + "/" + CallStack.getLastCaller(), getMessage(args));
+        System.out.println(getMessage(args));
     }
     public static void v(Object ...args) {
         if ( ! VERBOSE ) { return ; }
-        Log.v(LOG_TAG + "/" + CallStack.getLastCaller(), getMessage(args));
+        System.out.println(getMessage(args));
     }
     public static String getMessage(Object ...args) {
-        String msg = "";
+        String msg = LOG_TAG + "/" + CallStack.getLastCaller();
         for(Object arg : args) {
             if ( arg == null ) {
                 msg += "null";
