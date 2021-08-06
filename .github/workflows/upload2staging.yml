@@ -34,3 +34,4 @@ jobs:
 
     - name: Upload to the staging repository
       run: git submodule update --init --recursive && ./gradlew assemble && ./gradlew publishToSonatype closeAndReleaseStagingRepository
+
