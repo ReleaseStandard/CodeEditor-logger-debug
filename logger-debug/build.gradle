@@ -14,7 +14,7 @@
  *   limitations under the License.
  ******************************************************************************/
 
-apply plugin: 'java'
+apply plugin: 'java-library'
 
 dependencies {
     implementation "org.antlr:antlr4-runtime:4.9.2"
