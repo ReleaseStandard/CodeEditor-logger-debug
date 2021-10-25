@@ -10,6 +10,10 @@ import static java.lang.Thread.currentThread;
  */
 public class CallStack {
 
+    // Ignore theses classname tools
+    public static String [] classnameMustNotContains = new String[] {
+            "PerformanceReporter", ".util.Logger", ".util.CallStack", "dump"
+    };
 
     public static String getLastCaller() {
         return getLastCaller(Thread.getAllStackTraces().entrySet());
@@ -26,10 +30,18 @@ public class CallStack {
                 for(StackTraceElement ste : entry.getValue()) {
                     String classname = ste.getClassName();
                     String methodname = ste.getMethodName();
-                    if (    (classname.lastIndexOf("io.github.rosemoe.editor") != -1 || classname.lastIndexOf("org.antlr.v4") != -1) &&
-                            classname.lastIndexOf(".util.Logger") == -1 &&
-                            classname.lastIndexOf(".util.CallStack") == -1) {
-                        if (methodname.lastIndexOf("dump") == -1) {
+
+                    if (    (classname.lastIndexOf("io.github.rosemoe.editor") != -1 || classname.lastIndexOf("org.antlr.v4") != -1) ) {
+                        boolean skip = false;
+                        for(String ex : classnameMustNotContains) {
+                            if ( methodname.lastIndexOf(ex) != -1 ) {
+                                skip = true;
+                                break;
+                            }
+                        }
+                        if ( skip ) {
+
+                        } else {
                             return clearName(classname) + c + clearName(methodname + c + ste.getLineNumber());
                         }
                     }
